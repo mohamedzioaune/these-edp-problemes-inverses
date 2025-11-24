@@ -47,3 +47,21 @@ def helmholtz_discretization(k, nx, ny):
 A = helmholtz_discretization(1.0, nx, ny)
 
 Commit message: Discrétisation de l'équation de Helmholtz
+
+# Visualisation
+def plot_results(X, Y, solution):
+    """Affichage des résultats"""
+    plt.figure(figsize=(8, 6))
+    plt.contourf(X, Y, solution, levels=20, cmap='viridis')
+    plt.colorbar(label='Solution')
+    plt.xlabel('x')
+    plt.ylabel('y')
+    plt.title('Solution de l\'équation de Helmholtz')
+    plt.savefig('helmholtz_solution.png')
+    print("Visualisation sauvegardée")
+
+# Test avec solution fictive
+solution_test = np.sin(np.pi * X) * np.sin(np.pi * Y)
+plot_results(X, Y, solution_test)
+
+Commit message: Ajout de la visualisation des résultats
