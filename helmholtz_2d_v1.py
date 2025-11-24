@@ -19,3 +19,15 @@ X, Y = np.meshgrid(x, y)
 print("Maillage créé avec succès")
 print(f"Dimensions: {nx}x{ny}")
 Commit message: Initial commit - Structure du code
+
+# Fonction de maillage
+def create_mesh(nx, ny, Lx, Ly):
+    """Génère le maillage 2D"""
+    x = np.linspace(0, Lx, nx)
+    y = np.linspace(0, Ly, ny)
+    return np.meshgrid(x, y)
+
+X, Y = create_mesh(nx, ny, Lx, Ly)
+print("Fonction de maillage implémentée")
+
+Commit message: Ajout de la fonction de maillage
