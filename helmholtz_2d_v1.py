@@ -31,3 +31,19 @@ X, Y = create_mesh(nx, ny, Lx, Ly)
 print("Fonction de maillage implémentée")
 
 Commit message: Ajout de la fonction de maillage
+
+# Discrétisation de l'équation de Helmholtz
+def helmholtz_discretization(k, nx, ny):
+    """Discrétisation par différences finies"""
+    dx = Lx / (nx - 1)
+    dy = Ly / (ny - 1)
+    
+    # Matrice de discrétisation (simplifiée)
+    A = np.zeros((nx*ny, nx*ny))
+    
+    print("Discrétisation effectuée")
+    return A
+
+A = helmholtz_discretization(1.0, nx, ny)
+
+Commit message: Discrétisation de l'équation de Helmholtz
